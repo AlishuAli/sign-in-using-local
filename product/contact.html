@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <style>
+         * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+        .main{
+            height: 600px;
+            width: 100vw;
+            background-color: black;
+            position: relative;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        .contact{
+            height: 400px;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(23, 23, 56);
+            gap: 5px;
+            position: relative;
+            
+        }
+        .input{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            /* background-color: blue; */
+            gap: 5px;
+            position: absolute;
+            left: 20px;
+            
+        }
+        .contact input{
+            height: 30px;
+            width: 300px; 
+            border-radius: 3px;
+            outline: none;
+            border: none;
+        }
+        .contact button{
+            height: 30px;
+            width: 80px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            border-radius: 3px;
+            outline: none;
+            border: none;
+            color: rgb(23, 23, 56);
+
+        }
+        .contact #btn{
+            height: 120px;
+            width: 300px;
+
+        }
+        .info{
+            height: 200px;
+            width: 100vw;
+            background-color: rgb(228, 220, 210);
+            position: relative;
+        }
+        .info .tex{
+            position: absolute;
+            color: rgb(23, 23, 56);
+            left: 20px;
+            top: 30px;
+        }
+        .addres{
+            height: 300px;
+            width: 300px;
+            background-color: white;
+            position: absolute;
+            top: 200px;
+            right: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .addres .text{
+            position: absolute;
+            color: rgb(23, 23, 56);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+
+        }
+        .text p{
+            height: 3px;
+            
+        }
+        .text span{
+            height: 30px;
+        }
+        @media (max-width: 430px) {
+            .addres{
+                display: none;
+            }
+        }
+        .subscribe{
+            color: white;
+            height: 340px;
+            width: 100vw;
+            background-color:  rgb(23, 23, 56);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            position: relative
+            
+        }
+        #lower{
+            height: 2px;
+            width: 100px;
+            border-bottom: 2px solid ;
+            position: absolute;
+            top: 80px;
+        }
+        .subscribe span{
+            position: absolute;
+            top: 50px;
+        }
+        .subscribe p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* position: absolute; */
+            /* top: 120px; */
+
+        }
+        .flex{
+            position: absolute;
+            bottom: 90px;
+        }
+        .flex input{
+            height: 20px;
+            width: 200px;
+            color: rgb(23, 23, 56);
+        }
+        .flex button{
+            background-color: rgb(23, 23, 56);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="contact" id="contact">
+            <div class="input">
+            Enter your name<input type="text"  id="name" >
+            Enter your email<input type="email" id="email" >
+            Comment<input type="text"  id="btn" id="comment">
+        </div>
+            <button type="button"  id="button">Submit</button>
+        </div>
+        <div class="info">
+            <div class="tex">
+                <span><b>GET IN TOUCH</b></span>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing<br> elit. Exercitationem, rem.</P>
+            </div>
+        </div>
+        <div class="addres">
+            <div class="text">
+                <span><b>CALL Us</b></span>
+                <p>03213 678990</p><br>
+                <p>03213 678990</p><br>
+                <span><b>LOCATION</b></span>
+                <p>Main jarawala road faisalabad</p><br>
+                <p>Awami town</p><br>
+                <span><b>EMAIL</b></span>
+                <p>alishbaqamar05@gmail.com</p>
+            </div>
+           
+        </div>
+    </div>
+    <div class="subscribe">
+        <span>Subscribe</span>
+        <span id="lower"></span>
+        <p>Subscribe our website to stay update every moment</p>
+        <div class="flex">
+            <input type="text" placeholder="Enter email">
+            <button type="button">Submit</button>
+        </div>
+     </div>
+    <script>
+        let contact=document.getElementById('contact');
+        let name=document.getElementById('name')
+        let email=document.getElementById('email')
+        let comment=document.getElementById('comment')
+        let button=document.getElementById('button');
+        button.addEventListener('click', () => {
+            console.log(name.value);
+            localStorage.setItem('name', name.value);
+            localStorage.setItem('email', email.value);
+            localStorage.setItem('comment', comment.value);
+            
+            location.reload();
+        });
+
+    </script>
+</body>
+</html>

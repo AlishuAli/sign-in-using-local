@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <style>
+        .product-container{
+            height: 600px;
+            width: 100vw;
+            /* background-color: aquamarine; */
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .product{
+            height: 360px;
+            width: 240px;
+            /* background-color: rgb(23, 23, 56); */
+            border: 3px solid rgb(23, 23, 56);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .product .img{
+            height: 200px;
+            width: 220px;
+            /* background-color: blueviolet; */
+            position: absolute;
+            top: 10px;
+            background-size: cover;
+            border: 1px solid;
+        }
+        .product .img img {
+            height: 100%;  /* Ensures the image takes up the full height of the container */
+            width: 100%;   /* Ensures the image takes up the full width of the container */
+            object-fit: cover;
+        }
+        .product .title{
+            height: 50px;
+            width: 200px;
+            /* background-color: white; */
+            padding: 5px 0;
+
+            position: absolute;
+            color: rgb(23, 23, 56);
+            bottom: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+
+        }
+        .product .price{
+            height: 20px;
+            width: 150px;
+            /* background-color: rgb(23, 23, 56); */
+
+            position: absolute;
+            color: rgb(23, 23, 56);
+            bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: 5px 0; */
+
+        }
+        .product .btn{
+            position: absolute;
+            bottom: 10px;
+            background-color: rgb(23, 23, 56) !important;
+            color: white !important;
+        }
+        @media (max-width: 430px) {
+            .product{
+                height: 300px;
+                width: 200px;
+
+            }
+            .product .img{
+            height: 200px;
+            width: 190px;}
+            .product .title{
+            height: 50px;
+            width: 180px;
+            bottom: 40px;
+        }
+        .product .price{
+            bottom: 30px;
+        }
+        .product-container{
+            padding: 2px;
+        }
+    }
+    </style>
+</head>
+<body>
+   
+        <div class="product-container" id="product-container">
+        </div>
+    
+        <script>
+            async function product_fun() {
+                try {
+                    const data = await fetch('https://fakestoreapi.com/products');
+                    const jsondata = await data.json();
+                    console.log(jsondata);
+    
+                    const container = document.getElementById('product-container');
+                    container.innerHTML = '';
+    
+                    jsondata.forEach(element => {
+                        container.innerHTML += `
+                            <div class="product">
+                                <div class="img">
+                                    <img src="${element.image}" alt="${element.title}">
+                                </div>
+                                <div class="title">
+                                    <span>${element.title}</span>
+                                </div>
+                                <div class="price">
+                                    <span>$${element.price}</span>
+                                </div>
+                                <div class="btn">
+                                    <button type="button">Add to cart</button>
+                                </div>
+                            </div>`;
+                    });
+                } catch (err) {
+                    console.error('Fetch error:', err);
+                }
+            }
+    
+            product_fun();
+        </script>
+     
+</body>
+</html>

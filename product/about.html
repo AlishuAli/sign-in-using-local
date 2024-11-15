@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: white;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+
+        .about {
+            height: 650px;
+            width: 100vw;
+            background-color: aqua;
+            position: relative;
+        }
+
+        .color {
+            height: 200px;
+            width: 100vw;
+            background-color: rgb(23, 23, 56);
+        }
+
+        .less {
+            height: 450px;
+            width: 100vw;
+            background-color: rgb(228, 220, 210);
+        }
+
+        .pic {
+            height: 370px;
+            width: 700px;
+            background-color: black;
+            position: absolute;
+            top: 80px;
+            left: 300px;
+            background-image: url("about3.jpg");
+            background-size: cover;
+        
+        }
+        /* .pic span{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            color:  rgb(23, 23, 56);
+            font-weight: bold;
+            
+        } */
+
+        .trans {
+            height: 370px;
+            width: 700px;
+            background-color: rgb(238, 215, 215);
+            position: absolute;
+            top: 80px;
+            left: 300px;
+            opacity: 80%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            background-color:  rgb(23, 23, 56);
+        }
+        .trans span{
+            width: 600px;
+            font-size: 18px;
+            text-align: justify;
+            color:  white;
+            opacity: 1px;
+            font-family: 'Times New Roman', Times, serif;
+        
+        }
+        #abo{
+            margin-left: 550px;
+            margin-bottom: 10px;
+        }
+        .men{
+            height: 100px;
+            width: 180px;
+            background-color:  rgb(23, 23, 56);
+            position: absolute;
+            bottom: 20px;
+            left: 300px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+        }
+        .men2{
+            height: 100px;
+            width: 180px;
+            background-color:  rgb(23, 23, 56);
+            position: absolute;
+            bottom: 20px;
+            left: 560px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+        }
+        
+        .men3{
+            height: 100px;
+            width: 180px;
+            background-color:  rgb(23, 23, 56);
+            position: absolute;
+            bottom: 20px;
+            right: 320px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+        
+        }
+        @media (max-width: 430px) {
+            .pic{
+                left: 40px;
+                height: 400px;
+                width: 350px;
+            }
+            .trans{
+                left:40px ;
+                height: 400px;
+                width: 350px;
+                font-size: 12px;
+            }
+            .trans span{
+                width: 300px;
+            }
+            #abo{
+            margin-left: 250px;
+            margin-bottom: 10px;
+
+        }
+        .men{
+            height: 80px;
+            width: 120px;
+            left: 40px;
+            bottom: 50px;
+            font-size: 12px;
+        }
+        .men3{
+            display: none;
+        }
+        .men2{
+            height: 80px;
+            width: 120px;
+            left:  265px;
+            bottom: 50px;
+            font-size: 12px;
+        }
+    }
+    .subscribe{
+            color: white;
+            height: 320px;
+            width: 100vw;
+            background-color:  rgb(23, 23, 56);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            position: relative
+            
+        }
+        #lower{
+            height: 2px;
+            width: 100px;
+            border-bottom: 2px solid ;
+            position: absolute;
+            top: 80px;
+        }
+        .subscribe span{
+            position: absolute;
+            top: 50px;
+        }
+        .subscribe p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* position: absolute; */
+            /* top: 120px; */
+
+        }
+        .flex{
+            position: absolute;
+            bottom: 90px;
+        }
+        .flex input{
+            height: 20px;
+            width: 200px;
+            color: rgb(23, 23, 56);
+        }
+        .flex button{
+            background-color: rgb(23, 23, 56);
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="about">
+        <div class="color"></div>
+        <div class="less"></div>
+        <div class="pic">
+            <!-- <span>ABOUT</span> -->
+        </div>
+        <div class="trans">
+            <span id="abo">ABOUT</span>
+           
+            <span>"Welcome to [Your Store Name], your one-stop destination for describe our product range, e.g.,
+                quality electronics, trendy fashion, eco-friendly home goods. Founded with the belief that shopping
+                should be a delightful and hassle-free experience, we are committed to offering a curated selection of
+                products that meet the highest standards of quality and value.Our journey began with a simple idea: to
+                bring the best products from around the world to your doorstep, without compromising on convenience or
+                customer service. </span>
+        </div>
+        <div class="men">
+            <!-- <span>100K<br> <b>Users</b></span> -->
+             <span>100K</span>
+             <span><b>Users</b></span>
+        </div>
+        <div class="men2">
+            <span>300K</span>
+            <span><b>Views</b></span>
+         
+        </div>
+        <div class="men3">
+            <span>10+</span>
+            <span><b>Partnerships</b></span>
+         
+
+        </div>
+    </div>
+    <div class="subscribe">
+        <span>Subscribe</span>
+        <span id="lower"></span>
+        <p>Subscribe our website to stay update every moment</p>
+        <div class="flex">
+            <input type="text" placeholder="Enter email">
+            <button type="button">Submit</button>
+        </div>
+     </div>
+    <script>
+
+        const images = ["about.jpg", "about1.jpg", "about2.jpg", "about3.jpg"];
+
+
+        let currentIndex = 0;
+
+
+        function changeImage() {
+
+            const picDiv = document.querySelector('.pic');
+            picDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        setInterval(changeImage, 1000);
+    </script>
+
+
+
+
+</body>
+
+</html>
